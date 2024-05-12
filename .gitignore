@@ -1,0 +1,8 @@
+*.sketch
+
+*.xd
+*.fig
+
+.DS_Store
+config.env
+node_modules

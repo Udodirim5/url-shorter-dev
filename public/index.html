@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <nav>
+    <div class="left">
+      <a href="./index.html" class="logo">Shortly</a>
+
+      <div class="menu-ul">
+        <ul>
+          <li><a href="#" id="">Features</a></li>
+          <li><a href="#" id="">Pricing</a></li>
+          <li><a href="#" id="">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <button type="button" class="menu-bar">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <div class="right">
+      <button id="login">Login</button>
+      <button id="sign-up">Sign Up</button>
+    </div>
+
+    <div class="login-area">
+      <button id="close-btn">x</button>
+      <div id="login-box">
+        <div class="wrapper">
+          <form>
+            <p class="form-login">Login</p>
+            <div class="input-box">
+              <input required="" id="login-email" placeholder="Email address" type="email" />
+            </div>
+            <div class="input-box">
+              <input required="" id="login-password" placeholder="Password" type="password" />
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="#">Forgot Password</a>
+            </div>
+            <button class="btn" type="submit">Login</button>
+            <div class="register-link">
+              <p>Dont have an account? <button type="button" id="in-register">Register</button></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sign-up-area">
+      <button id="close-btn-2">x</button>
+
+      <form action="/submit" method="post">
+        <div id="register-box">
+          <div class="wrapper">
+            <p class="form-login">Register</p>
+            <div class="input-box">
+              <input required="" id="name" placeholder="Name" type="text" />
+            </div>
+            <div class="input-box">
+              <input required="" id="email" placeholder="Email address" type="email" />
+            </div>
+            <div class="input-box">
+              <input required="" id="reg-username" placeholder="Username" type="text" />
+            </div>
+            <button class="btn" id="next-btn" type="submit">Next</button>
+            <div class="register-link">
+              <p>Already have an account? <button type="button" id="in-login">log In</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="register-box2" class="final-reg">
+          <div class="wrapper">
+            <button id="go-back-btn" type="button"><i class="bi bi-chevron-compact-left"></i>Back</button>
+            <p class="form-login">Register</p>
+            <div class="input-box">
+              <input required="" id="reg-password" placeholder="Password" type="password" />
+            </div>
+            <div class="input-box">
+              <input required="" id="confirm-reg-password" placeholder="Comfirm password" type="password" />
+            </div>
+            <button class="btn" id="reg-btn" type="submit">Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <main>
+
+    <section class="hero">
+      <div class="action-sec">
+        <h1>More than just shorter links</h1>
+        <p>Build your brand's recognition and get detailed <br> insights on how your links are performing.</p>
+        <button>Get Started</button>
+      </div>
+      <div class="icon-sec">
+        <img src="./images/illustration-working.svg" alt="">
+      </div>
+    </section>
+
+    <section class="features">
+
+      <div class="reports-area">
+
+        <form class="short-it">
+          <div class="form">
+            <input id="input" type="url" placeholder="Shorten a link here..." autofocus required />
+            <button onclick="shortenUrl()" id="shorten" type="submit">Shorten It!</button>
+            <p id="warning"></p>
+            <div class="drop-box">
+              <div id="output"></div>
+              <div id="output-action">
+                <p id="shortened-output"></p>
+                <button id="copy" type="button">Copy</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="statistics">
+          <h2>Advanced Statistics</h2>
+          <p>Track how your links are performing across the web with <br> our advanced statistics dashboard.</p>
+        </div>
+
+        <div class="v-line"></div>
+        <div class="reports">
+          <div class="box">
+            <div class="box-img">
+              <img src="/images/icon-brand-recognition.svg" alt="" />
+            </div>
+            <h3>Brand Recognition</h3>
+            <p> Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </div>
+          <div class="box">
+            <div class="box-img">
+              <img src="/images/icon-detailed-records.svg" alt="" />
+            </div>
+            <h3>Detailed Records</h3>
+            <p> Gain insights into who is clicking your links. Knowing when and where
+              people engage with your content helps inform better decisions.
+            </p>
+          </div>
+          <div class="box">
+            <div class="box-img">
+              <img src="./images/icon-fully-customizable.svg" alt="">
+            </div>
+            <h3>Fully Customizable</h3>
+            <p> Improve brand awareness and content discoverability through customizable
+              links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="action">
+      <h2>Boost your links today</h2>
+      <button>Get Started</button>
+    </section>
+  </main>
+
+  <footer>
+    <a href="./index.html" class="logo">Shortly</a>
+    <ul>
+      <li>Features</li>
+      <li><a href="">Link Shortening</a></li>
+      <li><a href="">Branded Links</a></li>
+      <li><a href="">Analytics</a></li>
+    </ul>
+
+    <ul>
+      <li>Resources</li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">Developers</a></li>
+      <li><a href="">Support</a></li>
+    </ul>
+
+    <ul>
+      <li>Company</li>
+      <li><a href="">About</a></li>
+      <li><a href="">Our Team</a></li>
+      <li><a href="">Careers</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+
+    <ul class="social">
+      <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+      <li><a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+      <li><a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+      <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+    </ul>
+  </footer>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/url-dhorten-function.js"></script>
+</body>
+
+</html>
